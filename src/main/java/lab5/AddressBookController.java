@@ -67,10 +67,12 @@ public class AddressBookController {
      * To add a list of buddyInfo's:
      * https://www.baeldung.com/thymeleaf-list
      */
-    public void newAddressBook(@ModelAttribute BuddyInfo buddyInfo, @ModelAttribute AddressBook addressBook) {
+    public void newAddressBook(@ModelAttribute BuddyInfo buddyInfo) {
         System.out.println(buddyInfo);
         System.out.println(buddyInfo.getName());
         System.out.println(buddyInfo.getPhoneNumber());
+
+        AddressBook addressBook = new AddressBook();
 
         addressBook.addBuddyInfo(buddyInfo);
 //        buddyInfoRepository.save(buddyInfo);
